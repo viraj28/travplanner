@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700&family=Poppins:wght@300;400;500&family=Urbanist:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+
+:root{
+    --bs-dark-color : #212121 ;
+    --bs-dark-primary : #1c1c1c;
+    --bs-main-color : #fff;
+    --bs-primary-color : #f4f8fd;
+    --secondary-color : #29a9fd;
+    --bs-supporting-color : #c850c0;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: "Poppins", sans-serif;
+    color: var(--bs-dark-color);
+}
+
+.nav-link {
+    color: var(--bs-dark-color);
+    text-decoration: none;
+}
+
+
+
+h1{
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+    h1{
+        font-size: 40px;
+    }
+}
+
+p {
+    margin : 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--bs-dark-color);
+    line-height: 1.6em;
+    letter-spacing: 0.07rem;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+button, a{
+    font-size: 1.15rem;
+    letter-spacing: 0.03rem;
+    word-spacing: .1rem;
+}
+
+li{
+    list-style: none;
+}
+
+h2{
+    line-height: 3rem;
+    font-weight: 600;
+    font-size: 3.4rem;
+}
+
+.common-heading{
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: 0.01rem !important;
+}
+
+
+/* Navbar */
+
+.navbar{
+    background-color: var(--bs-main-color) ;
+}
+
+.nav-link{
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: var(--secondary-color);
+}
+
+/* hero section start */
+
+.bg-main{
+    height: 55vh;
+    position: relative;
+}
+@media only screen and (max-width: 993px){
+    .bg-main{
+        height: auto;
+    }
+
+    .hero-img--section, .happy-img--section{
+        margin-bottom: 32px;
+    }
+
+    .hero-section{
+        margin-top: 70px;
+    }
+}
+.hero-section{
+    background-color: var(--bs-primary-color);
+    margin-top: 90px;
+}
+
+.hero-section .container, .happy-section .container{
+    display: grid;
+    place-content: center;
+    height: inherit;
+}
+
+.hero-img--section, .happy-img--section{
+    height: auto;
+    width:17rem;
+    border-radius: 0.5rem;
+}
+
+
+/* Featured section */
+
+.featured_img{
+    width: 100%;
+    height: 1.5rem;
+}
+
+@media only screen and (max-width: 993px){
+    .featured_img{
+        width: 48%;
+        height:auto;
+        margin-bottom: 4px;
+    }
+}
+
+.featured_section{
+   
+    margin-top: 120px;
+}
+
+
+/* SERVICES section */
+
+.services-section{
+    margin-top: 3rem;
+    padding: 4rem 0 3rem 0;
+    background-color: var(--bs-primary-color);
+}
+
+/* HAPPY CUSTOMERS */
+
+.happy-img--section{
+    height: auto;
+    width:30rem;
+    border-radius: 0.5rem;
+}
+
+.happy-section{
+    background-color: var(--bs-main-color);
+}
+
+/* newsletter section */
+
+.newsletter-section{
+    background-color: var(--bs-primary-color);
+}
+
+.newsletter-section p {
+    letter-spacing: normal;
+}
+
+
+/* Contact section */
+.contact-section{
+    min-height: 70vh;
+    margin-top: 90px;
+}
+
+@media only screen and (max-width: 993px){
+
+    .contact-section{
+        margin-top: 70px;
+    }
+}
+
+.contact-form{
+    background-color: var(--bs-primary-color);
+}
+
+
+/* explore section */
+
+.places-section{
+    min-height: 60vh;
+    margin-top: 90px;
+}
+
+@media only screen and (max-width: 993px){
+
+    .places-section{
+        margin-top: 70px;
+    }
+
+    .place-img{
+        width:100%;
+        height:auto;
+        margin-bottom: 16px;
+    }
+}
+
+
+/* footer */
+.footer{
+ 
+    background-color: var(--bs-primary-color);
+}
+

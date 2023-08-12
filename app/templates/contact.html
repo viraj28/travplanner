@@ -1,0 +1,59 @@
+{%extends 'base.html'%} 
+{% block content %}
+<section class="contact-section mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-6 mt-5">
+        <div
+          class="d-flex flex-column justify-content-center align-items-start"
+        >
+          <div>
+            <h2 class="common-heading">Have Questions?​</h2>
+            <p class="mb-4">
+              Please feel free to call or email us, or use our contact form to
+              get in touch with us. We look forward to hearing from you!
+            </p>
+          </div>
+          <div class="mb-2">
+            <b>Emergency? Call Us:</b>
+            <p>+935783023</p>
+          </div>
+          <div class="mb-2">
+            <b>Send Us Mail</b>
+            <p>contact@domain.com</p>
+          </div>
+          <div class="mb-2">
+            <b>Find the Studio</b>
+            <div class="mt-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15079.452048964838!2d72.85943415154463!3d19.113664638434805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c83c05b7fc89%3A0xbe87eb057f3aafda!2sAndheri%2C%20Maharashtra%20400053!5e0!3m2!1sen!2sin!4v1691744907390!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <!-- Contact section Form -->
+      <div class="col-12 col-md-12 col-lg-6 mt-5">
+        <div class="text-center contact-form container">
+            <form action="/contact/submit" method="post" class="p-5">
+                {% if submitted %}
+                  <p class="text-success"> Information Submitted. Thank you! </p>
+                {% endif %}
+                <input type="text" name="full_name" id="name" placeholder="Your Name" class="form-control mb-3" required />
+                <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control mb-3" required/>
+                <input type="text" name="mail_subject" id="subject" placeholder="Subject" class="form-control mb-3" required/>
+                <textarea name="message" id="message" rows="7" placeholder="Your Message" class="form-control mb-3" required></textarea>
+
+                
+                <div class="text-center">
+        
+                    <input type="submit" value="Submit" class="btn btn-primary px-3 py-2 text-capitalize mx-auto">
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'newsletter.html' %}
+{% endblock %}

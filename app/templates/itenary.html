@@ -1,0 +1,44 @@
+{%extends 'base.html' %}
+
+{% block content %}
+    <section class="places-section pt-5">
+        
+        <div class="container">
+            <div class="row">
+                 
+                <div class="col-12 col-md-12 mb-4">
+                    <div class="border p-3">
+                        <div class="d-flex flex-lg-row flex-column">
+                            <div><img src="{{place.link}}" class="rounded place-img" alt=""></div>
+                            <div class="d-flex flex-column ms-3">
+                                <h5>{{place.title}}</h5>
+                                <p>{{place.detail}}</p>
+                                
+                                <div class="col-12 col-md-12  mt-5">
+                                    <div class="text-center container contact-form">
+                                        <form action="/itenary/{{place.id}}" method="post" class="p-5">
+                                            {% if submitted %}
+                                                <p class="text-success"> Information Submitted. Thank you! </p>
+                                            {% else %}
+                                                <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control mb-3" required/>
+                                                <div class="text-center">
+                                                    
+                                                    <input type="submit" value="Submit" class="btn btn-primary px-3 py-2 text-capitalize mx-auto">
+                                                </div>
+                                            {% endif %}
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+
+    
+    {% include 'newsletter.html' %}
+{% endblock %}
